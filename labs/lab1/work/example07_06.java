@@ -7,7 +7,7 @@ public class example07_06 {
 		System.out.print("Введите имя: ");
 		String name = in.nextLine();
 
-		System.out.print("Введите год рождения: ");
+		System.out.print("Введите возраст: ");
 		int age = in.nextInt();
 		
 		age = 2020 - age;
