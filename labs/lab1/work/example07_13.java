@@ -6,8 +6,8 @@ class example07_13 {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("катет а=" + a);
-		System.out.println("катет b=" + b);
-		System.out.println("катет a^b=" + new_());
+		System.out.println("а=" + a);
+		System.out.println("b=" + b);
+		System.out.println("a^b=" + new_());
 	}
 }
