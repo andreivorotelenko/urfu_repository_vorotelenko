@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class example07_03 {
 	
 	//переменные для циклов
-	//с первоначальными значениями
+
 	public static long num_f_old = 0;
 	public static long num_f = 1;
 	public static long num_f_out = 0;
-	public static int i = 1;
-    
+	public static long i = 1;
+	public static long startTimeLocal;
+	public static long endTimeLocal = 0;
 	
 	//создание чисел фибы циклом for
 	public static void for_ (int step){
@@ -99,26 +100,19 @@ public class example07_03 {
 	
 	//рекурсивное создание чисел фибы
 	public static void recursion_ (int step, int num, int i){
-		if (num_f_out < 0 ){//проверка на переполнение 
-			//вывод времени работы
-	        long endTimeLocal = System.currentTimeMillis();
-	        System.out.println("\nLocal Execution time: " + (endTimeLocal-startTimeLocal) + "ms\n" );
-	        
-			System.out.print("\nERROR - переполнение - ERROR\n");
-			return;
-			
-		}
+		
 		if (step - i < 0){//проверка на конечную итерацию
 			//вывод времени работы
-	        long endTimeLocal = System.currentTimeMillis();
+			long endTimeLocal = System.currentTimeMillis();
+	        //System.out.print("~~~~~~~0~~~~~ " + endTimeLocal + " " + startTimeLocal + "~~~~~~~~~");
+	        
 	        System.out.println("\nLocal Execution time: " + (endTimeLocal-startTimeLocal) + "ms\n" );
 	        
 			return;
 			
-		}else if ( i == 0){//первая итерация
-			
+		}if (i == 0){//первая итерация
 			//замер времени
-			long startTimeLocal = System.currentTimeMillis();
+			startTimeLocal = System.currentTimeMillis();
 	        
 			num_f_old = 0;
 			num_f = 1;
@@ -126,7 +120,17 @@ public class example07_03 {
 			step -= i;
 			i++;
 			
-		}else {//основное действо
+		}
+		if (num_f_out < 0){//проверка на переполнение 
+			//вывод времени работы
+			long endTimeLocal = System.currentTimeMillis();
+			System.out.println("\nLocal Execution time: " + (endTimeLocal-startTimeLocal) + "ms\n" );
+	        
+			System.out.print("ERROR - переполнение - ERROR\n");
+			return;
+			
+		}
+		else {//основное действо
 			
 			System.out.print(num_f_out + " ");
 			num_f_out = num_f + num_f_old;
@@ -134,6 +138,9 @@ public class example07_03 {
 			num_f = num_f_out;
 			i++;
 		}
+		
+		
+		
 		recursion_ (step, num, i);
 		
 	}
