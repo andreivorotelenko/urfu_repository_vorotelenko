@@ -6,70 +6,27 @@ public class example07_02 {
 		Scanner InCMD = new Scanner (System.in);
 		System.out.print("Input day: ");
 		String day = InCMD.next();
+		System.out.print(day);
 		
 		switch (day){
-			case "понедельник":
-			case "Monday":
+			//case "понедельник":
+			//case "Monday":
 			case "monday":
-			case "Понедельник":
-		System.out.print(day + " = ");
+			//case "Понедельник":
 				System.out.print(1);
 				break;
 				
-			case "вторник":
-			case "Tuesday":
+			//case "вторник":
+			//case "Tuesday":
 			case "tuesday":
-			case "Вторник":
-		System.out.print(day + " = ");
+			//case "Вторник":
 				System.out.print(2);
 				break;
-
-			case "среда":
-			case "Среда":
-			case "Wednesday":
-			case "wednesday":
-		System.out.print(day + " = ");
-				System.out.print(3);
-				break;
-
-			case "четверг":
-			case "Четверг":
-			case "Thursday":
-			case "thursday":
-		System.out.print(day + " = ");
-				System.out.print(4);
-				break;
-
-			case "пятница":
-			case "Пятница":
-			case "Friday":
-			case "friday":
-		System.out.print(day + " = ");
-				System.out.print(5);
-				break;
-
-			case "суббота":
-			case "Суббота":
-			case "Saturday":
-			case "saturday":
-		System.out.print(day + " = ");
-				System.out.print(6);
-				break;
-			
-			case "воскресенье":
-			case "Воскресенье":
-			case "Sunday":
-			case "sunday":
-		System.out.print(day + " = ");
-				System.out.print(7);
-				break;
-			
-			default:
-				System.out.print("Введенное слово должно " +
-								 "быть понедельник или вторник");
+			//default:
+				//System.out.print("Введенное число должно " +
+					//			 "быть от 1 до 7");
 		}
 
 	}
 
 }
-
