@@ -104,7 +104,7 @@ public class example07_03 {
 		if (step - i < 0){//проверка на конечную итерацию
 			//вывод времени работы
 			long endTimeLocal = System.currentTimeMillis();
-	        //System.out.print("~~~~~~~0~~~~~ " + endTimeLocal + " " + startTimeLocal + "~~~~~~~~~");
+	        
 	        
 	        System.out.println("\nLocal Execution time: " + (endTimeLocal-startTimeLocal) + "ms\n" );
 	        
