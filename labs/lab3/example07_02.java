@@ -9,22 +9,57 @@ public class example07_02 {
 		System.out.print(day);
 		
 		switch (day){
-			//case "понедельник":
-			//case "Monday":
+			case "понедельник":
+			case "Monday":
 			case "monday":
-			//case "Понедельник":
-				System.out.print(1);
+			case "Понедельник":
+				System.out.println(" " + 1);
 				break;
 				
-			//case "вторник":
-			//case "Tuesday":
+			case "вторник":
+			case "Tuesday":
 			case "tuesday":
-			//case "Вторник":
-				System.out.print(2);
+			case "Вторник":
+				System.out.println(" " + 2);
 				break;
-			//default:
-				//System.out.print("Введенное число должно " +
-					//			 "быть от 1 до 7");
+
+			case "среда":
+			case "wednesday":
+			case "Wednesday":
+			case "Среда":
+				System.out.println(" " + 3);
+				break;
+
+			case "четверг":
+			case "thursday":
+			case "Thursday":
+			case "Четверг":
+				System.out.println(" " + 4);
+				break;
+
+			case "пятница":
+			case "friday":
+			case "Friday":
+			case "Пятница":
+				System.out.println(" " + 5);
+				break;
+
+			case "суббота":
+			case "saturday":
+			case "Saturday":
+			case "Cуббота":
+				System.out.println(" " + 6);
+				break;
+
+			case "воскресенье":
+			case "sunday":
+			case "Sunday":
+			case "Воскресенье":
+				System.out.println(" " + 7);
+				break;
+			default:
+				System.out.print("Введенное слово должно " +
+								 "быть от понедельник до воскресенье");
 		}
 
 	}
