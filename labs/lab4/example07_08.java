@@ -18,7 +18,7 @@ public class example07_08 {
 		char [] alphabet = {'a', 'b', 'c', 'd' , 'e',
 							'f', 'g', 'h', 'i', 'j',
 							'k', 'l', 'm', 'n', 'o',
-							'p', 'r', 's', 't', 'u',
+							'p', 'q', 'r', 's', 't', 'u',
 							'v', 'w', 'x', 'y', 'z'};
 		
 
@@ -26,10 +26,10 @@ public class example07_08 {
 		System.out.print("output string: ");
 		for (int i = 0; i < str.length(); i++ ) {
 			boolean switch_ = false;
-			for (int q = 0; q <= 24; q++ ) {
+			for (int q = 0; q <= 25; q++ ) {
 				
 				if (ch[i] == alphabet[q]) {
-					int buf = (q + num) % 24;
+					int buf = (q + num) % 25;
 					switch_ = true;
 					//System.out.println(buf);
 					System.out.print(alphabet[buf]);
@@ -52,11 +52,11 @@ public class example07_08 {
 			System.out.println("reverse conversion (y/n): ");
 			String input_line_AAA = InCMD.nextLine();
 
-				if (input_line_AAA == "y"){
+				if (input_line_AAA.equals("y")){
 						System.out.print(str);
 						break;
 					}
-				else if (input_line_AAA == "n") {
+				else if (input_line_AAA.equals("n")) {
 						System.out.print("Ĝis revido");
 						break;
 				}else System.out.println("Vi diras al mi tion, kion mi ne scias");
