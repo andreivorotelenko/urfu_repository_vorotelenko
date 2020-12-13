@@ -12,7 +12,7 @@ public class example07_08 {
 
 		System.out.print("input bias: ");
 		int num = InCMD.nextInt();
-
+		num %= 24;
 
 
 		//начальный замер времени		
@@ -29,20 +29,44 @@ public class example07_08 {
 							'v', 'w', 'x', 'y', 'z'};
 		
 
-		
-
+		//колдунство для создания шифра
+		System.out.print("output string: ");
 		for (int i = 0; i < str.length(); i++ ) {
+			boolean switch_ = false;
 			for (int q = 0; q <= 24; q++ ) {
 				
 				if (ch[i] == alphabet[q]) {
-					int buf = q + num;
+					int buf = (q + num) % 24;
+					switch_ = true;
+					//System.out.println(buf);
 					System.out.print(alphabet[buf]);
 					break;
 				}
 				
 			}
+			if (switch_ == false) {
+				System.out.println("\ninvalid character found\n");
+				return;
+			}
 		}
 
+		System.out.println(" ");
+
+		//вывод (типо) меню
+		System.out.println("reverse conversion (y/n): ");
+		String byn = InCMD.nextLine();
+
+		switch (byn) {
+			case "y":
+				System.out.print(str);
+				break;
+			case "n":
+				System.out.print("Ĝis revido");
+				break;
+			default:
+				System.out.println("Vi diras al mi tion, kion mi ne scias");
+				break;
+		}
 
 		//конечный замер времени		
 		long endTimeGlobal = System.currentTimeMillis();
