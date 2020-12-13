@@ -43,7 +43,7 @@ public class example07_08 {
 		}
 		System.out.println(" ");
 
-		//костыль что бы не выводило дважды меню
+		//фича что бы не выводило дважды меню
 		String input_line = InCMD.nextLine();
 
 		//вывод (типо) меню
