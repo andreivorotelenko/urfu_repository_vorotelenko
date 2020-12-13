@@ -8,18 +8,11 @@ public class example07_08 {
 		Scanner InCMD = new Scanner (System.in);
 		System.out.print("input string: ");
 		String str = InCMD.nextLine();
-
+		char[] ch = str.toCharArray();
 
 		System.out.print("input bias: ");
 		int num = InCMD.nextInt();
 		num %= 24;
-
-
-		//начальный замер времени		
-		long startTimeGlobal = System.currentTimeMillis();
-		
-		//преобразование строки в char
-		char[] ch = str.toCharArray();
 
 		//массив символов для проверки и сдвига
 		char [] alphabet = {'a', 'b', 'c', 'd' , 'e',
@@ -42,37 +35,32 @@ public class example07_08 {
 					System.out.print(alphabet[buf]);
 					break;
 				}
-				
 			}
 			if (switch_ == false) {
 				System.out.println("\ninvalid character found\n");
 				return;
 			}
 		}
-
 		System.out.println(" ");
 
+		//костыль что бы не выводило дважды меню
+		String input_line = InCMD.nextLine();
+
 		//вывод (типо) меню
-		System.out.println("reverse conversion (y/n): ");
-		String byn = InCMD.nextLine();
+		while (true){
 
-		switch (byn) {
-			case "y":
-				System.out.print(str);
-				break;
-			case "n":
-				System.out.print("Ĝis revido");
-				break;
-			default:
-				System.out.println("Vi diras al mi tion, kion mi ne scias");
-				break;
+			System.out.println("reverse conversion (y/n): ");
+			String input_line_AAA = InCMD.nextLine();
+
+				if (input_line_AAA == "y"){
+						System.out.print(str);
+						break;
+					}
+				else if (input_line_AAA == "n") {
+						System.out.print("Ĝis revido");
+						break;
+				}else System.out.println("Vi diras al mi tion, kion mi ne scias");
+
 		}
-
-		//конечный замер времени		
-		long endTimeGlobal = System.currentTimeMillis();
-	        System.out.println("\nGlobal Execution time: " + (endTimeGlobal-startTimeGlobal) + "ms" );
-	
- 
 	}
-
 }
