@@ -2,8 +2,14 @@ public class example07_06_1 {
 	private int min;
 	private int max;
 
+	public example07_06_1 () {
+		min = 0;
+		max = 0;
+	}
+
 
 	public example07_06_1 (int a, int b) {
+
 		if (a >= b) {
 			min = b; 
 			max = a;
