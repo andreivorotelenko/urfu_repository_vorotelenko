@@ -13,8 +13,6 @@ public class example07_06 {
 		System.out.print("input two num: ");
 		int num2 = InCMD.nextInt();
 
-		//example07_06_1 args_ = new example07_06_1();
-
 		example07_06_1 args_ = new example07_06_1();
 		args_.example07_06_1_void (num2, num1);
 
